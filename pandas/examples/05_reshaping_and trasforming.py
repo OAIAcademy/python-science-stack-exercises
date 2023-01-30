@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 
 url = "https://storage.googleapis.com/academy_datasets/exercises/california-house-prices/california_housing_test.csv"
@@ -21,5 +22,14 @@ print(df['total_rooms'].drop_duplicates().count() == len(df['total_rooms'].uniqu
 
 # pandas features also a sql like groupby
 print("group")
-print(df.groupby("total_rooms").mean()) # group by colums and aggregate by sum
-
+print(df.groupby("total_rooms").mean())  # group by column and aggregate by average
+print(df.groupby("total_rooms").sum())  # group by column and aggregate by sum
+print(df.groupby("total_rooms").agg({"median_income": lambda x: np.min(x)}))  # group by column custom agg
+# also a sql like join (default left join)
+df1 = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3', 'K4', 'K5'],
+                    'A': ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']})
+df2 = pd.DataFrame({'key': ['K0', 'K1', 'K2'],
+                    'B': ['B0', 'B1', 'B2']})
+print(df1.join(df2.set_index('key'), on='key', how='inner'))
+# or the merge methods, similar to join but not working on indexes (default inner)
+print(df1.merge(df2, left_on='key', right_on='key', how='left'))
