@@ -2,10 +2,9 @@ import datetime
 
 import pandas as pd
 
-with open('pandas/data/D202.csv', 'r') as fp:
+with open('pandas_library/data/D202.csv', 'r') as fp:
     df = pd.read_csv(fp)
 # single/mutiple column can be select
-df["USAGE"]
 df.USAGE
 df[["USAGE", "TYPE"]]
 # and assigned
@@ -24,9 +23,9 @@ print(df.loc[1:10, "DATE"])  # from value to value with slicing
 
 print(df.iloc[2])
 print(df.iloc[[2, 3, 4]])
-print(df.iloc[[2, 3, 4]])
 print(df.iloc[1:10])
 #       .at to select a single value (a single cell of the table), and does not return a series like loc and iloc
+print("cost:")
 print(df.at[1, "COST"])
 print(df.loc[5].at['COST'])  # also in a series
 #       .iat like .at but positional

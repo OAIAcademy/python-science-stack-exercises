@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import datetime
 
-with open('pandas/data/d202.csv', 'r') as fp:
+with open('pandas_library/data/d202.csv', 'r') as fp:
     df = pd.read_csv(fp)
 # create a datetime column using apply to multiple column
 df["time"] = df[['DATE', 'END TIME']].apply(

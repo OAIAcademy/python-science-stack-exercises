@@ -18,7 +18,7 @@ print(df.pivot(index="population", columns='total_rooms',
 # drop and drop_duplicates
 print(df.drop("latitude", axis="columns").columns)  # drop columns
 print(df.drop([1, 2, 3, 4, 5, 6], axis="rows").head())  # drop rows by index
-print(df['total_rooms'].drop_duplicates().count() == len(df['total_rooms'].unique()))  # drop duplicates
+print(df['total_rooms'].drop_duplicates().count() == len(df['total_rooms'].unique()))  # drop duplicatesm
 
 # pandas features also a sql like groupby
 print("group")

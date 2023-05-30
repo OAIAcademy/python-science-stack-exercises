@@ -29,14 +29,15 @@ pd.DataFrame(data=d, index=[0, 1, 2, 3])
 
 # and reading from sources
 #          from csv
-with open('pandas/data/D202.csv', 'r') as fp:
+with open('pandas_library/data/D202.csv', 'r') as fp:
     df = pd.read_csv(fp)
 #           from json
-with open('pandas/data/D202.json', 'r', errors='ignore') as fp:
+with open('pandas_library/data/D202.json', 'r', errors='ignore') as fp:
     df = pd.read_json(fp)
 #           from url
 url = "https://storage.googleapis.com/academy_datasets/exercises/california-house-prices/california_housing_test.csv"
 df = pd.read_csv(url)
+
 
 # some basic info about can be retrived using .describe() & .info()
 print(df.info())  # info on the dataframe useful for the programmer

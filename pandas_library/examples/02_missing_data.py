@@ -9,7 +9,8 @@ df.loc[(df["latitude"] > 33) & (df["latitude"] < 34), "median_house_value"] = np
 # some time data source has missing or invalid data, and this can create problems on calculation
 print(df.info())
 # .fillna fill the null/na value with the selected method
-df.fillna(0)  # fill with 0
+df.fillna(0)
+# fill with 0
 df.fillna('a')  # fill with a string
 df.fillna(method='ffill')  # use last valid value
 df.fillna(method='backfill')  # use next valid value
