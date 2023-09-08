@@ -28,7 +28,7 @@ element = matrix[1, 2]
 print(element)
 
 # Transpose the matrix
-print(matrix.T)  # Create a 2D numpy matrix with dimensions 4x3
+print(matrix.T)
 
 # Multiply the matrices
 matrix2 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
@@ -37,3 +37,13 @@ print(np.dot(matrix, matrix2))
 # max
 print(np.max(matrix))
 print(np.argmax(matrix))
+
+# random
+print(np.random.randint(0, 100, size=(2, 3)))
+print(np.random.choice(matrix.flat, size=2, replace=False))
+
+# statistics
+np.mean(matrix)
+np.std(matrix)
+
+

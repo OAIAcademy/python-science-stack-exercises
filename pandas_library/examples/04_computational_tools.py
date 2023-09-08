@@ -10,6 +10,7 @@ print("kurtosis ", df.median_house_value.kurt())
 # one useful method is sample, which select n random sample
 print(df.sample(1000).count())
 print(df.sample(frac=0.2).count())
+
 print(df.sample(100, weights=df["total_rooms"]).count())  # use Series as weight
 # one useful method is .apply, it is used to apply a function to a whole series or dataframe
 print("apply ", df.total_rooms.apply(lambda x: x / df.total_rooms.max()).max())

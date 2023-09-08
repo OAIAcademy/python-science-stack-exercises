@@ -1,6 +1,7 @@
 import pandas as pd  # import pandas with the standard alias pd
 import numpy as np
 
+
 # a series is a one dimensional array (a column of a table) with an index
 d = {'a': 1, 'b': 2, 'c': 3}
 series = pd.Series(data=d, index=['a', 'b', 'c'])
@@ -20,9 +21,7 @@ df = pd.DataFrame(data={'col1': [1, 2], 'col2': [3, 4]})
 #       from numpy array
 df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
                   columns=['a', 'b', 'c'])
-#       from numpy array
-df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
-                  columns=['a', 'b', 'c'])
+
 #       froma dict of series
 d = {'col1': [0, 1, 2, 3], 'col2': pd.Series([2, 3], index=[2, 3])}
 pd.DataFrame(data=d, index=[0, 1, 2, 3])
@@ -56,7 +55,7 @@ print(df.info())  # info on the dataframe useful for the programmer
 # dtypes: float64(9)
 # memory usage: 211.1 KB
 
-print(df.describe())  # basic descriptive statistics
+print(df.describe()["median_income"])  # basic descriptive statistics
 #          longitude    latitude  ...  median_income  median_house_value
 # count  3000.000000  3000.00000  ...    3000.000000          3000.00000  number of valid (null/na) values in the row
 # mean   -119.589200    35.63539  ...       3.807272        205846.27500  average
