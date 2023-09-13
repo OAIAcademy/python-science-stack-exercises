@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-url = "https://storage.googleapis.com/academy_datasets/exercises/california-house-prices/california_housing_test.csv"
+url = "https://storage.googleapis.com/academy-datasets-public/exercises/california-house-prices/california_housing_test.csv"
 df = pd.read_csv(url)
 # to change to index of a df
 print(df.index)

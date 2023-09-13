@@ -1,7 +1,7 @@
 import pandas as pd
 
 # pandas provide some basic method on statistical analysis, here are some example
-url = "https://storage.googleapis.com/academy_datasets/exercises/california-house-prices/california_housing_test.csv"
+url = "https://storage.googleapis.com/academy-datasets-public/exercises/california-house-prices/california_housing_test.csv"
 df = pd.read_csv(url)
 print("average ", df.median_house_value.mean())
 print("median ", df.median_house_value.median())

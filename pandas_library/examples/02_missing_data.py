@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-url = "https://storage.googleapis.com/academy_datasets/exercises/california-house-prices/california_housing_test.csv"
+url = "https://storage.googleapis.com/academy-datasets-public/exercises/california-house-prices/california_housing_test.csv"
 df = pd.read_csv(url)
 df.loc[df["latitude"] < 33, "median_house_value"] = None
 df.loc[(df["latitude"] > 33) & (df["latitude"] < 34), "median_house_value"] = np.NAN

@@ -1,7 +1,6 @@
 import pandas as pd  # import pandas with the standard alias pd
 import numpy as np
 
-
 # a series is a one dimensional array (a column of a table) with an index
 d = {'a': 1, 'b': 2, 'c': 3}
 series = pd.Series(data=d, index=['a', 'b', 'c'])
@@ -34,7 +33,7 @@ with open('pandas_library/data/D202.csv', 'r') as fp:
 with open('pandas_library/data/D202.json', 'r', errors='ignore') as fp:
     df = pd.read_json(fp)
 #           from url
-url = "https://storage.googleapis.com/academy_datasets/exercises/california-house-prices/california_housing_test.csv"
+url = "https://storage.googleapis.com/academy-datasets-public/exercises/california-house-prices/california_housing_test.csv"
 df = pd.read_csv(url)
 
 

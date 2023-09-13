@@ -1,6 +1,6 @@
 import pandas as pd
 
-url = "https://storage.googleapis.com/academy_datasets/exercises/california-house-prices/california_housing_test.csv"
+url = "https://storage.googleapis.com/academy-datasets-public/exercises/california-house-prices/california_housing_test.csv"
 df = pd.read_csv(url)
 
 # 1 - compute standard deviation of median_income for sample with grater than average total_bedrooms
